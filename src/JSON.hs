@@ -9,6 +9,8 @@ module JSON where
 
 import Lab7 -- solutions to Lab7 are needed
 
+import System.IO
+
 --------------------------------------------------------------------------------
 -- JSON representation
 
@@ -72,9 +74,25 @@ strP = Str <$> between (ch (=='"')) (ch (=='"')) (many (ch (/='"')))
 arrP :: Parser Value
 arrP = Arr <$> between (ch (=='[')) (token $ ch (==']')) (sepBy valP (token $ ch (==',')))
 
+keyValueP :: Parser (String, Value)
+keyValueP = do
+    Str key <- strP
+    token (ch (==':'))
+    val <- valP
+    return (key, val)
+
+objP :: Parser Value
+objP = Obj <$> between (ch (=='{')) (token $ ch (=='}')) (sepBy (token keyValueP) (token $ ch (==',')))
 
 valP :: Parser Value
-valP = token (nullP <|> boolP <|> natP <|> strP <|> arrP)
+valP = token (nullP <|> boolP <|> natP <|> strP <|> arrP <|> objP)
+
+parseFile :: FilePath -> IO ()
+parseFile fp = withFile fp ReadMode $ \h -> do
+    xs <- hGetContents h
+    case parse valP xs of
+        Nothing -> putStrLn "Not a valid JSON document"
+        Just v  -> print v
 
 
 
