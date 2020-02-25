@@ -1,2 +1,3 @@
-# lecture22
-Code shown in lecture 22, "Fun with sequential composition"
+# Lecture: Fun with sequential composition
+
+Code shown in the CS141 lecture on Fun with sequential composition.

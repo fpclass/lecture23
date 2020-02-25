@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 -- Functional Programming (CS141)                                             --
--- Lecture 22: Fun with sequential composition                                --
+-- Lecture: Fun with sequential composition                                   --
 --------------------------------------------------------------------------------
 
 module Event where

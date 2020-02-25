@@ -1,13 +1,13 @@
 --------------------------------------------------------------------------------
 -- Functional Programming (CS141)                                             --
--- Lecture 22: Fun with sequential composition                                --
+-- Lecture: Fun with sequential composition                                   --
 --------------------------------------------------------------------------------
 
 module JSON where
 
 --------------------------------------------------------------------------------
 
-import Lab7 -- solutions to Lab7 are needed
+import Lab -- solutions to the applicative functors lab are needed
 
 --------------------------------------------------------------------------------
 -- JSON representation

@@ -21,4 +21,4 @@ cabal.project.local~
 .HTF/
 .ghc.environment.*
 
-src/Lab7.hs
+src/Lab.hs
