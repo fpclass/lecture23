@@ -14,7 +14,7 @@ import Event
 --------------------------------------------------------------------------------
 
 e0 :: String
-e0 = "{\"id\": 30, \"title\": \"Karaoke\", \"when\": \"2019-02-27T18:00:00Z\", \"where\": \"S0.11\" }"
+e0 = "{\"id\": 59, \"title\": \"End of term Meal\", \"when\": \"2020-03-11T17:45:00Z\", \"where\": \"Shin Ramen\" }"
 
 -- e0v :: Maybe Value
 -- e0v = fst <$> parse valP e0
@@ -23,7 +23,7 @@ e0 = "{\"id\": 30, \"title\": \"Karaoke\", \"when\": \"2019-02-27T18:00:00Z\", \
 -- e0e = e0v >>= parseJSON
 
 e1 :: String
-e1 = "{\"id\": 31, \"title\": \"All Nighter\", \"when\": \"2019-03-09T20:00:00Z\", \"where\": \"B2.04\" }"
+e1 = "{\"id\": 60, \"title\": \"Old School Anime Night\", \"when\": \"2020-02-29T16:00:00Z\", \"where\": \"MS.05\" }"
 
 -- e1v :: Maybe Value
 -- e1v = fst <$> parse valP e1
